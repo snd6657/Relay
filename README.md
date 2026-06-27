@@ -69,4 +69,4 @@ npm run dev
 The UI will run on `http://localhost:8080`.
 
 ## 🔒 Security Note
-This repository contains a `.gitignore` specifically configured to prevent the accidental upload of `.env` files, API keys, the local `relay.db` SQLite database, and `.lovable` integration tokens. Ensure you never commit your environment variables.
+This repository contains a `.gitignore` specifically configured to prevent the accidental upload of `.env` files, API keys
