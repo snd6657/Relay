@@ -1,0 +1,14 @@
+fastapi[all]>=0.111.0
+sqlalchemy>=2.0.30
+alembic>=1.13.1
+psycopg2-binary>=2.9.9
+pydantic>=2.7.4
+pydantic-settings>=2.3.4
+langgraph>=0.0.66
+langchain-google-genai>=1.0.6
+langchain-core>=0.2.7
+tavily-python>=0.3.3
+firecrawl-py>=1.1.2
+requests>=2.32.3
+pgvector>=0.2.5
+langgraph-checkpoint-sqlite>=1.0.0
