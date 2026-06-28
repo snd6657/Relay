@@ -176,7 +176,6 @@ uvicorn app.main:app --reload
 ### 3. Frontend
 
 ```bash
-cd frontend
 
 npm install
 
