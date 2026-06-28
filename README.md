@@ -183,12 +183,6 @@ npm install
 npm run dev
 ```
 
-The application will be available at:
-
-```
-Frontend : http://localhost:8080
-Backend  : http://localhost:8000
-```
 
 ---
 
