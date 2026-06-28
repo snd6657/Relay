@@ -19,11 +19,11 @@ Relay utilizes intelligent agents to search the web, scrape company data, qualif
 ## 🛠️ Tech Stack
 ### **AI & Orchestration**
 - **LangGraph:** For stateful, multi-agent orchestration (Planner, Scraper, Qualification, Recommendation).
-- **Gemini 2.5 Flash / Groq (Llama 3):** LLM integration for rapid, high-context reasoning.
+- **Gemini 2.5 Flash :** LLM integration for rapid, high-context reasoning.
 
 ### **Backend**
 - **FastAPI (Python):** High-performance backend API handling async workflow execution.
-- **SQLite + SQLAlchemy ORM:** Lightweight and optimized database for rapid state persistence and complex queries.
+- **Supabase:** Lightweight and optimized database for rapid state persistence and complex queries.
 
 ### **Frontend**
 - **React + Vite:** Extremely fast build tool and frontend framework.
