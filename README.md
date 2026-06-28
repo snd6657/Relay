@@ -1,72 +1,205 @@
-# Relay: Agentic AI B2B Lead Generation Platform
+# Relay – Agentic AI B2B Prospect Intelligence Platform
 
-An autonomous Agentic AI platform designed to revolutionize B2B Lead Generation and Market Research. 
+> **Discover. Qualify. Recommend.**
 
-Relay utilizes intelligent agents to search the web, scrape company data, qualify leads against a strict Ideal Customer Profile (ICP), extract structured metadata, and provide human-in-the-loop explainable recommendations.
-
-## 👥 Team
-- **Soma Nandini** – CSE (AIML)
-- **G Srihitha** – CSE (IOT)
-- **Akshaya** – CSE
-
-## 🚀 Features
-- **Autonomous Market Intelligence:** Define an ICP and let the AI hunt for matching companies.
-- **Deep Scraping & Reasoning:** Uses Firecrawl to scrape raw website data and reads it via LLMs to extract insights like industry, tech stack, and employee count.
-- **Intelligent Qualification:** Scores companies against your strict business rules and immediately filters out bad leads.
-- **Explainable AI:** Generates a detailed "Explainability Report" providing bullet-pointed evidence for why a company was approved or rejected.
-- **Optimistic Human-in-the-Loop UI:** Lightning-fast React dashboard to review, approve, or reject AI recommendations.
-
-## 🛠️ Tech Stack
-### **AI & Orchestration**
-- **LangGraph:** For stateful, multi-agent orchestration (Planner, Scraper, Qualification, Recommendation).
-- **Gemini 2.5 Flash :** LLM integration for rapid, high-context reasoning.
-
-### **Backend**
-- **FastAPI (Python):** High-performance backend API handling async workflow execution.
-- **Supabase:** Lightweight and optimized database for rapid state persistence and complex queries.
-
-### **Frontend**
-- **React + Vite:** Extremely fast build tool and frontend framework.
-- **TailwindCSS:** For a sleek, premium, glass-morphism aesthetic.
-- **TanStack Query & Router:** For optimistic UI updates and seamless state management.
+Relay is an **Agentic AI-powered B2B Prospect Intelligence Platform** that automates the complete workflow of discovering companies, analyzing business intelligence, qualifying leads, identifying decision-makers, and generating explainable recommendations.
 
 ---
 
-## 💻 Local Setup Instructions
+## 🚀 Features
 
-### 1. Backend Setup
-Navigate to the `backend` folder and set up your Python environment:
+* Create projects using an Ideal Customer Profile (ICP)
+* Autonomous multi-agent workflow powered by LangGraph
+* Company discovery and market intelligence
+* Company qualification using business rules
+* Decision-maker identification and contact enrichment
+* AI-generated recommendations with explainability
+* Human-in-the-loop approval workflow
+* Workflow monitoring and analytics dashboard
+
+---
+
+## 🧠 AI Workflow
+
+```text
+Create Project
+      │
+      ▼
+Planner Agent
+      │
+      ▼
+Market Intelligence Agent
+      │
+      ▼
+Company Intelligence Agent
+      │
+      ▼
+Qualification Agent
+      │
+      ▼
+Contact Intelligence Agent
+      │
+      ▼
+Recommendation Agent
+      │
+      ▼
+Human Approval
+      │
+      ▼
+Memory Agent
+```
+
+---
+
+## 🏗 High-Level Architecture
+
+```text
+Frontend (React + Vite + Tailwind)
+                │
+                ▼
+      FastAPI Backend API
+                │
+        ┌───────┴────────┐
+        ▼                ▼
+ LangGraph Engine    Supabase
+  (AI Agents)       PostgreSQL
+        │
+        ▼
+ External Services
+ Gemini • Tavily • Firecrawl • Hunter.io
+```
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn/ui
+* TanStack Query
+
+### Backend
+
+* FastAPI
+* Python
+
+### AI & Orchestration
+
+* LangGraph
+* Gemini 2.5 Flash
+
+### Database
+
+* Supabase
+* PostgreSQL
+
+### External APIs
+
+* Tavily
+* Firecrawl
+* Hunter.io
+
+---
+
+## 📂 Project Structure
+
+```text
+relay/
+│
+├── frontend/
+│
+├── backend/
+│   ├── agents/
+│   ├── planner/
+│   ├── workflow/
+│   ├── api/
+│   ├── services/
+│   ├── database/
+│   └── app/
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Local Setup
+
+### 1. Clone Repository
+
+```bash
+git clone <repository-url>
+cd relay
+```
+
+### 2. Backend
+
 ```bash
 cd backend
+
 python -m venv venv
-# On Windows:
+
+# Windows
 venv\Scripts\activate
-# On Mac/Linux:
+
+# macOS/Linux
 source venv/bin/activate
 
-# Install dependencies
 pip install -r requirements.txt
 ```
 
-Create a `.env` file inside the `backend` directory with your API keys:
+Create a `.env` file inside the backend directory.
+
 ```env
-GEMINI_API_KEY="your_google_ai_key"
-FIRECRAWL_API_KEY="your_firecrawl_key"
-TAVILY_API_KEY="your_tavily_key"
+GEMINI_API_KEY=your_api_key
+
+SUPABASE_URL=your_supabase_url
+
+SUPABASE_ANON_KEY=your_supabase_anon_key
+
+TAVILY_API_KEY=your_api_key
+
+FIRECRAWL_API_KEY=your_api_key
+
+HUNTER_API_KEY=your_api_key
 ```
 
-Start the FastAPI server:
+Run the backend:
+
 ```bash
-python -m uvicorn app.main:app --reload --port 8001
+uvicorn app.main:app --reload
 ```
 
-### 2. Frontend Setup
-Open a new terminal and navigate to the project root:
+### 3. Frontend
+
 ```bash
+cd frontend
+
 npm install
+
 npm run dev
 ```
-The UI will run on `http://localhost:8080`.
 
-## 🔒 Security Note
-This repository contains a `.gitignore` specifically configured to prevent the accidental upload of `.env` files, API keys
+The application will be available at:
+
+```
+Frontend : http://localhost:8080
+Backend  : http://localhost:8000
+```
+
+---
+
+## 👥 Team
+
+* **Soma Nandini**
+* **G. Srihitha**
+* **Akshaya**
+
+---
+
+## 📌 Built For
+
+Hackathon MVP demonstrating the capabilities of **Agentic AI** for autonomous B2B prospect discovery, qualification, and recommendation.
