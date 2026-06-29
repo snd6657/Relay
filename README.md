@@ -187,9 +187,9 @@ npm run dev
 
 ## 👥 Team
 
-* **Soma Nandini**
-* **G. Srihitha**
-* **Akshaya**
+* **Soma Nandini(CSE-AIML)-23071A6657**
+* **Gudipati Srihitha(CSE-IOT)-23071A6918**
+* **Amancha Akshaya(CSE)-23071A0503**
 
 ---
 
